@@ -14,9 +14,10 @@ public class SpringIn10StepsApplication {
 		//binarySearchImpl binarySearch = new binarySearchImpl(new QuickSortAlgorithm());
 		ConfigurableApplicationContext run = SpringApplication.run(SpringIn10StepsApplication.class, args);
 		BinarySearchImpl binarySearch = run.getBean(BinarySearchImpl.class);
+		BinarySearchImpl binarySearch1 = run.getBean(BinarySearchImpl.class);
+		System.out.println(binarySearch);
+		System.out.println(binarySearch1);
 		int res = binarySearch.binarySearch(new int[] { 12, 4, 6 }, 3);
 		System.out.println(res);
-		//com.javamaster.springbasics.springmaster.BubbleSortAlgorithm@27adc16e
-		//3
 	}
 }
